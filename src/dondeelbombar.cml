@@ -1,0 +1,22 @@
+ContextMap DondeElBombarMap{
+    contains VENTAS
+    contains CAJA
+    contains USUARIOS
+    contains RECLAMOS
+    contains RESERVAS
+    contains MENU
+
+    VENTAS [P]<->[P] RESERVAS
+    VENTAS [SK]<->[SK] CAJA
+    RECLAMOS [D,C]<-[U,S] VENTAS
+    VENTAS [D,CF]<-[U,OHS,PL] USUARIOS
+    RESERVAS [D,ACL]<-[U,OHS,PL] USUARIOS
+    USUARIOS [P]<->[P] MENU  
+}
+
+BoundedContext VENTAS{}
+BoundedContext CAJA{}
+BoundedContext USUARIOS{}
+BoundedContext RECLAMOS{}
+BoundedContext RESERVAS{}
+BoundedContext MENU{} 

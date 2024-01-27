@@ -1,0 +1,27 @@
+digraph "ContextMapGraph" {
+graph ["imagepath"="/tmp/GraphvizJava"]
+"CAJA" ["margin"="0.3","orientation"="266","shape"="egg","fontsize"="16","style"="bold","label"="CAJA\n","fontname"="sans-serif"]
+"MENU" ["margin"="0.3","orientation"="294","shape"="egg","fontsize"="16","style"="bold","label"="MENU\n","fontname"="sans-serif"]
+"RECLAMOS" ["margin"="0.3","orientation"="157","shape"="egg","fontsize"="16","style"="bold","label"="RECLAMOS\n","fontname"="sans-serif"]
+"RESERVAS" ["margin"="0.3","orientation"="298","shape"="egg","fontsize"="16","style"="bold","label"="RESERVAS\n","fontname"="sans-serif"]
+"USUARIOS" ["margin"="0.3","orientation"="288","shape"="egg","fontsize"="16","style"="bold","label"="USUARIOS\n","fontname"="sans-serif"]
+"VENTAS" ["margin"="0.3","orientation"="347","shape"="egg","fontsize"="16","style"="bold","label"="VENTAS\n","fontname"="sans-serif"]
+"USUARIOS" -> "MENU" ["fontsize"="12","style"="bold","label"="Partnership","dir"="none","fontname"="sans-serif"]
+"USUARIOS" -> "VENTAS" ["headlabel"=<<table cellspacing="0" cellborder="1" border="0">
+<tr><td bgcolor="white" sides="r">D</td><td sides="trbl" bgcolor="white"><font>CF</font></td></tr>
+</table>>,"labeldistance"="0","fontsize"="12","taillabel"=<<table cellspacing="0" cellborder="1" border="0">
+<tr><td bgcolor="white" sides="r">U</td><td sides="trbl" bgcolor="white"><font>OHS, PL</font></td></tr>
+</table>>,"style"="bold","label"="                                        ","dir"="none","fontname"="sans-serif"]
+"USUARIOS" -> "RESERVAS" ["headlabel"=<<table cellspacing="0" cellborder="1" border="0">
+<tr><td bgcolor="white" sides="r">D</td><td sides="trbl" bgcolor="white"><font>ACL</font></td></tr>
+</table>>,"labeldistance"="0","fontsize"="12","taillabel"=<<table cellspacing="0" cellborder="1" border="0">
+<tr><td bgcolor="white" sides="r">U</td><td sides="trbl" bgcolor="white"><font>OHS, PL</font></td></tr>
+</table>>,"style"="bold","label"="                                        ","dir"="none","fontname"="sans-serif"]
+"VENTAS" -> "CAJA" ["fontsize"="12","style"="bold","label"="Shared Kernel","dir"="none","fontname"="sans-serif"]
+"VENTAS" -> "RESERVAS" ["fontsize"="12","style"="bold","label"="Partnership","dir"="none","fontname"="sans-serif"]
+"VENTAS" -> "RECLAMOS" ["headlabel"=<<table cellspacing="0" cellborder="0" border="0">
+<tr><td bgcolor="white">D</td></tr>
+</table>>,"labeldistance"="0","fontsize"="12","taillabel"=<<table cellspacing="0" cellborder="0" border="0">
+<tr><td bgcolor="white">U</td></tr>
+</table>>,"style"="bold","label"="Customer/Supplier","dir"="none","fontname"="sans-serif"]
+}
